@@ -1,0 +1,1 @@
+var linkClicked=function(){},initStateChange=function(){},newPageReady=function(){},transitionCompleted=function(){};
