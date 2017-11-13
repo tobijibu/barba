@@ -43,54 +43,55 @@
     <div class="barba-container">
       <div class="wrapper">
         <div class="navi">
-          <h1><a href="./">Home</a></h1>
-          <h1 class="introduction"><a href="./introduction.html">Introduction</a></h1>
-          <h1 class="how-it-works"><a href="./how-it-works.html">How it works</a></h1>
-          <h1 class="installation"><a href="./installation.html">Installation</a></h1>
-          <h1 class="transition"><a class="active" href="./transition.html">Transition</a></h1>
-          <h1 class="events"><a href="./events.html">Events</a></h1>
-          <h1 class="views"><a href="./views.html">Views</a></h1>
-          <h1 class="cache"><a href="./cache.html">Cache</a></h1>
-          <h1 class="prefetch"><a href="./prefetch.html">Prefetch</a></h1>
-          <h1 class="partial-output"><a href="./partial-output.html">Partial Output</a></h1>
-          <h1 onclick="toggleApi()">API</h1>
-          <div class="hidden" id="navi_api">
-            <ul>
-              <li class="base-cache"><a href="./api/base-cache.html">BaseCache</a></li>
-              <li class="base-transition"><a href="./api/base-transition.html">BaseTransition</a></li>
-              <li class="base-view"><a href="./api/base-view.html">BaseView</a></li>
-              <li class="dispatcher"><a href="./api/dispatcher.html">Dispatcher</a></li>
-              <li class="history-manager"><a href="./api/history-manager.html">HistoryManager</a></li>
-              <li class="pjax"><a href="./api/pjax.html">Pjax</a></li>
-              <li class="pjax-dom"><a href="./api/pjax-dom.html">Pjax.Dom</a></li>
-              <li class="prefetch"><a href="./api/prefetch.html">Prefetch</a></li>
-              <li class="utils"><a href="./api/utils.html">Utils</a></li>
-            </ul>
-          </div>
-          <h1 onclick="toggleDemos()">Demos</h1>
-          <div class="hidden" id="navi_demos">
-            <ul>
-              <li class="http://barbajs.org/demo/grid/index.html"><a href="http://barbajs.org/demo/grid/index.html" target="_blank">official - Grid</a></li>
-              <li class="http://barbajs.org/demo/nextprev/index.html"><a href="http://barbajs.org/demo/nextprev/index.html" target="_blank">official - Next/Prev</a></li>
-              <li class="http://barbajs.org/demo/nextprev-circle/index.html"><a href="http://barbajs.org/demo/nextprev-circle/index.html" target="_blank">official - Circles</a></li>
-              <li class="basic"><a href="./demo/basic/1.html" target="_blank">Basic</a></li>
-              <li class="hide-show"><a href="./demo/hide-show/1.html" target="_blank">HideShow</a></li>
-              <li class="fade"><a href="./demo/fade/1.html" target="_blank">Fadein/out</a></li>
-              <li class="event"><a href="./demo/event/1.html" target="_blank">Event</a></li>
-              <li class="view"><a href="./demo/view/1.html" target="_blank">View</a></li>
-              <li class="cache"><a href="./demo/cache/1.html" target="_blank">Cache</a></li>
-              <li class="prefetch"><a href="./demo/prefetch/1.html" target="_blank">Prefetch</a></li>
-              <li class="partial-output"><a href="./demo/partial-output/1.html" target="_blank">Partial Output</a></li>
-              <li class="no-barba"><a href="./demo/no-barba/1.html" target="_blank">No Barba</a></li>
-            </ul>
-          </div>
-          <h1 class="faq"><a href="./faq.html">FAQ</a></h1>
-          <h1 class="various"><a href="./various.html">Various</a></h1>
-          <h2 class="Github"><a href="https://github.com/luruke/barba.js" target="_blank">Github</a></h2>
-          <h2 class="@luruke"><a href="https://twitter.com/luruke" target="_blank">@luruke</a></h2>
-          <hr>
-          <h1>HTML Source</h1>
-          <div id="navi_source"><a href="https://github.com/tobijibu/barba/archive/master.zip"><i class="menu-icon material-icons">&#xE884;</i></a><a href="https://github.com/tobijibu/barba/"><i class="menu-icon material-icons">&#xE86F;</i></a></div>
+          <ul>
+            <li><a href="./">Home</a></li>
+            <li class="introduction"><a href="./introduction.html">Introduction</a></li>
+            <li class="how-it-works"><a href="./how-it-works.html">How it works</a></li>
+            <li class="installation"><a href="./installation.html">Installation</a></li>
+            <li class="transition"><a class="active" href="./transition.html">Transition</a></li>
+            <li class="events"><a href="./events.html">Events</a></li>
+            <li class="views"><a href="./views.html">Views</a></li>
+            <li class="cache"><a href="./cache.html">Cache</a></li>
+            <li class="prefetch"><a href="./prefetch.html">Prefetch</a></li>
+            <li class="partial-output"><a href="./partial-output.html">Partial Output</a></li>
+            <li><span onclick="toggleApi()">API</span>
+              <ul class="hidden" id="navi_api">
+                <li class="api-base-cache"><a href="./api/base-cache.html">BaseCache</a></li>
+                <li class="api-base-transition"><a href="./api/base-transition.html">BaseTransition</a></li>
+                <li class="api-base-view"><a href="./api/base-view.html">BaseView</a></li>
+                <li class="api-dispatcher"><a href="./api/dispatcher.html">Dispatcher</a></li>
+                <li class="api-history-manager"><a href="./api/history-manager.html">HistoryManager</a></li>
+                <li class="api-pjax"><a href="./api/pjax.html">Pjax</a></li>
+                <li class="api-pjax-dom"><a href="./api/pjax-dom.html">Pjax.Dom</a></li>
+                <li class="api-prefetch"><a href="./api/prefetch.html">Prefetch</a></li>
+                <li class="api-utils"><a href="./api/utils.html">Utils</a></li>
+              </ul>
+            </li>
+            <li><span onclick="toggleDemos()">Demos</span>
+              <ul class="hidden" id="navi_demos">
+                <li class="demos-http://barbajs.org/demo/grid/index.html"><a href="http://barbajs.org/demo/grid/index.html" target="_blank">official - Grid</a></li>
+                <li class="demos-http://barbajs.org/demo/nextprev/index.html"><a href="http://barbajs.org/demo/nextprev/index.html" target="_blank">official - Next/Prev</a></li>
+                <li class="demos-http://barbajs.org/demo/nextprev-circle/index.html"><a href="http://barbajs.org/demo/nextprev-circle/index.html" target="_blank">official - Circles</a></li>
+                <li class="demos-basic"><a href="./demo/basic/1.html" target="_blank">Basic</a></li>
+                <li class="demos-hide-show"><a href="./demo/hide-show/1.html" target="_blank">HideShow</a></li>
+                <li class="demos-fade"><a href="./demo/fade/1.html" target="_blank">Fadein/out</a></li>
+                <li class="demos-event"><a href="./demo/event/1.html" target="_blank">Event</a></li>
+                <li class="demos-view"><a href="./demo/view/1.html" target="_blank">View</a></li>
+                <li class="demos-cache"><a href="./demo/cache/1.html" target="_blank">Cache</a></li>
+                <li class="demos-prefetch"><a href="./demo/prefetch/1.html" target="_blank">Prefetch</a></li>
+                <li class="demos-partial-output"><a href="./demo/partial-output/1.html" target="_blank">Partial Output</a></li>
+                <li class="demos-no-barba"><a href="./demo/no-barba/1.html" target="_blank">No Barba</a></li>
+              </ul>
+            </li>
+            <li class="faq"><a href="./faq.html">FAQ</a></li>
+            <li class="various"><a href="./various.html">Various</a></li>
+            <li class="cls" style="font-size:.8em;"><a href="https://github.com/luruke/barba.js" target="_blank">Github</a></li>
+            <li class="cls" style="font-size:.8em;"><a href="https://twitter.com/luruke" target="_blank">@luruke</a></li>
+            <hr>
+            <li>HTML Source
+              <div id="navi_source"><a href="https://github.com/tobijibu/barba/archive/master.zip"><i class="menu-icon material-icons">&#xE884;</i></a><a href="https://github.com/tobijibu/barba/"><i class="menu-icon material-icons">&#xE86F;</i></a></div>
+            </li>
+          </ul>
           <script>
             toggleApi = function() {
               let elem = document.getElementById('navi_api');
