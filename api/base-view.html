@@ -39,70 +39,154 @@
       navi_icon.classList.toggle('active');
     }
   </script>
-  <div id="barba-wrapper">
-    <div class="barba-container">
-      <div class="wrapper">
-        <div class="navi">
-          <ul>
-            <li><a href="../">Home</a></li>
-            <li class="introduction"><a href="../introduction.html">Introduction</a></li>
-            <li class="how-it-works"><a href="../how-it-works.html">How it works</a></li>
-            <li class="installation"><a href="../installation.html">Installation</a></li>
-            <li class="transition"><a href="../transition.html">Transition</a></li>
-            <li class="events"><a href="../events.html">Events</a></li>
-            <li class="views"><a href="../views.html">Views</a></li>
-            <li class="cache"><a href="../cache.html">Cache</a></li>
-            <li class="prefetch"><a href="../prefetch.html">Prefetch</a></li>
-            <li class="partial-output"><a href="../partial-output.html">Partial Output</a></li>
-            <li><span onclick="toggleApi()">API</span>
-              <ul id="navi_api">
-                <li class="api-base-cache"><a href="../api/base-cache.html">BaseCache</a></li>
-                <li class="api-base-transition"><a href="../api/base-transition.html">BaseTransition</a></li>
-                <li class="api-base-view"><a class="active" href="../api/base-view.html">BaseView</a></li>
-                <li class="api-dispatcher"><a href="../api/dispatcher.html">Dispatcher</a></li>
-                <li class="api-history-manager"><a href="../api/history-manager.html">HistoryManager</a></li>
-                <li class="api-pjax"><a href="../api/pjax.html">Pjax</a></li>
-                <li class="api-pjax-dom"><a href="../api/pjax-dom.html">Pjax.Dom</a></li>
-                <li class="api-prefetch"><a href="../api/prefetch.html">Prefetch</a></li>
-                <li class="api-utils"><a href="../api/utils.html">Utils</a></li>
-              </ul>
-            </li>
-            <li><span onclick="toggleDemos()">Demos</span>
-              <ul class="hidden" id="navi_demos">
-                <li class="demos-http://barbajs.org/demo/grid/index.html"><a href="http://barbajs.org/demo/grid/index.html" target="_blank">official - Grid</a></li>
-                <li class="demos-http://barbajs.org/demo/nextprev/index.html"><a href="http://barbajs.org/demo/nextprev/index.html" target="_blank">official - Next/Prev</a></li>
-                <li class="demos-http://barbajs.org/demo/nextprev-circle/index.html"><a href="http://barbajs.org/demo/nextprev-circle/index.html" target="_blank">official - Circles</a></li>
-                <li class="demos-basic"><a href="../demo/basic/1.html" target="_blank">Basic</a></li>
-                <li class="demos-hide-show"><a href="../demo/hide-show/1.html" target="_blank">HideShow</a></li>
-                <li class="demos-fade"><a href="../demo/fade/1.html" target="_blank">Fadein/out</a></li>
-                <li class="demos-event"><a href="../demo/event/1.html" target="_blank">Event</a></li>
-                <li class="demos-view"><a href="../demo/view/1.html" target="_blank">View</a></li>
-                <li class="demos-cache"><a href="../demo/cache/1.html" target="_blank">Cache</a></li>
-                <li class="demos-prefetch"><a href="../demo/prefetch/1.html" target="_blank">Prefetch</a></li>
-                <li class="demos-partial-output"><a href="../demo/partial-output/1.html" target="_blank">Partial Output</a></li>
-                <li class="demos-no-barba"><a href="../demo/no-barba/1.html" target="_blank">No Barba</a></li>
-              </ul>
-            </li>
-            <li class="faq"><a href="../faq.html">FAQ</a></li>
-            <li class="various"><a href="../various.html">Various</a></li>
-            <li class="cls" style="font-size:.8em;"><a href="https://github.com/luruke/barba.js" target="_blank">Github</a></li>
-            <li class="cls" style="font-size:.8em;"><a href="https://twitter.com/luruke" target="_blank">@luruke</a></li>
-            <hr>
-            <li>HTML Source
-              <div id="navi_source"><a href="https://github.com/tobijibu/barba/archive/master.zip"><i class="menu-icon material-icons">&#xE884;</i></a><a href="https://github.com/tobijibu/barba/"><i class="menu-icon material-icons">&#xE86F;</i></a></div>
-            </li>
+  <div class="wrapper">
+    <div class="navi">
+      <ul class="menu">
+        <li><a class="index" href="../index.html">Home</a></li>
+        <li><a href="../introduction.html">Introduction</a></li>
+        <li><a href="../how-it-works.html">How it works</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../transition.html">Transition</a></li>
+        <li><a href="../events.html">Events</a></li>
+        <li><a href="../views.html">Views</a></li>
+        <li><a href="../cache.html">Cache</a></li>
+        <li><a href="../prefetch.html">Prefetch</a></li>
+        <li><a href="../partial-output.html">Partial Output</a></li>
+        <li><span onclick="toggleApi()">API</span>
+          <ul id="navi_api">
+            <li><a href="../api/base-cache.html">BaseCache</a></li>
+            <li><a href="../api/base-transition.html">BaseTransition</a></li>
+            <li><a class="active" href="../api/base-view.html">BaseView</a></li>
+            <li><a href="../api/dispatcher.html">Dispatcher</a></li>
+            <li><a href="../api/history-manager.html">HistoryManager</a></li>
+            <li><a href="../api/pjax.html">Pjax</a></li>
+            <li><a href="../api/pjax-dom.html">Pjax.Dom</a></li>
+            <li><a href="../api/prefetch.html">Prefetch</a></li>
+            <li><a href="../api/utils.html">Utils</a></li>
           </ul>
-          <script>
-            toggleApi = function() {
-              let elem = document.getElementById('navi_api');
-              elem.classList.toggle('hidden');
-            }
-            toggleDemos = function() {
-              let elem = document.getElementById('navi_demos');
-              elem.classList.toggle('hidden');
-            }
-          </script>
-        </div>
+        </li>
+        <li><span onclick="toggleDemos()">Demos</span>
+          <ul class="hidden" id="navi_demos">
+            <li><a class="external-link" href="http://barbajs.org/demo/grid/index.html" target="_blank">official - Grid</a></li>
+            <li><a class="external-link" href="http://barbajs.org/demo/nextprev/index.html" target="_blank">official - Next/Prev</a></li>
+            <li><a class="external-link" href="http://barbajs.org/demo/nextprev-circle/index.html" target="_blank">official - Circles</a></li>
+            <li><a href="../demo/basic/1.html" target="_blank">Basic</a></li>
+            <li><a href="../demo/hide-show/1.html" target="_blank">HideShow</a></li>
+            <li><a href="../demo/fade/1.html" target="_blank">Fadein/out</a></li>
+            <li><a href="../demo/event/1.html" target="_blank">Event</a></li>
+            <li><a href="../demo/view/1.html" target="_blank">View</a></li>
+            <li><a href="../demo/cache/1.html" target="_blank">Cache</a></li>
+            <li><a href="../demo/prefetch/1.html" target="_blank">Prefetch</a></li>
+            <li><a href="../demo/partial-output/1.html" target="_blank">Partial Output</a></li>
+            <li><a href="../demo/no-barba/1.html" target="_blank">No Barba</a></li>
+          </ul>
+        </li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../various.html">Various</a></li>
+        <li class="cls" style="font-size:.8em;"><a class="external-link" href="https://github.com/luruke/barba.js" target="_blank">Github</a></li>
+        <li class="cls" style="font-size:.8em;"><a class="external-link" href="https://twitter.com/luruke" target="_blank">@luruke</a></li>
+      </ul>
+      <hr>
+      <ul>
+        <li>HTML Source
+          <div id="navi_source"><a href="https://github.com/tobijibu/undefinedarchive/master.zip"><i class="menu-icon material-icons">&#xE884;</i></a><a href="https://github.com/tobijibu/undefined"><i class="menu-icon material-icons">&#xE86F;</i></a></div>
+        </li>
+      </ul>
+      <div id="gcs" data-id="017083506626304158170:y9rrk7xt2lg">
+        <script>
+          (function() {
+            var cx = document.getElementById('gcs').getAttribute('data-id');
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+        <gcse:search linkTarget=""></gcse:search>
+      </div>
+      <style>
+        .cse .gsc-control-cse,
+        .gsc-control-cse {
+          border: 0px solid #fff;
+          padding: 0;
+        }
+        /* 検索ボックス */
+        .gsc-input-box {
+          border: 0px solid #fff;
+          border-bottom: 1px solid #000;
+        }
+        .gsc-search-box-tools .gsc-search-box .gsc-input {
+          padding-right: 0px;
+        }
+        .gsc-search-box .gsc-input>input:hover,
+        .gsc-input-box-hover {
+          border: 1px solid #fff;
+          border-bottom: 1px solid #333;
+          border-top-color: #fff;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+        .gsc-search-box .gsc-input>input:focus,
+        .gsc-input-box-focus {
+          border: 1px solid #fff;
+          border-bottom: 1px solid #333;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+        .gsib_a {
+          padding-top: 2px;
+        }
+        .gsst_a .gscb_a {
+          color: #aaa;
+        }
+        /* 検索ボタン */
+        input.gsc-search-button {
+          margin-left: 0;
+        }
+        .cse .gsc-search-button input.gsc-search-button-v2,
+        input.gsc-search-button-v2 {
+          padding: 6px;
+          margin-top: 5px;
+        }
+        .cse input.gsc-search-button,
+        input.gsc-search-button {
+          color: #fff;
+          border: 1px solid #000;
+          border-radius: 0;
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0;
+          background-color: #000;
+          background-image: none;
+          filter: none;
+          transition: .4s;
+        }
+        .cse input.gsc-search-button:hover,
+        input.gsc-search-button:hover {
+          color: #333;
+          border-color: #333;
+          background-color: #333;
+          background-image: none;
+          filter: none;
+          transition: .4s;
+        }
+      </style>
+      <script>
+        toggleApi = function() {
+          let elem = document.getElementById('navi_api');
+          elem.classList.toggle('hidden');
+        }
+        toggleDemos = function() {
+          let elem = document.getElementById('navi_demos');
+          elem.classList.toggle('hidden');
+        }
+      </script>
+    </div>
+    <div id="barba-wrapper">
+      <div class="barba-container">
         <div class="main">
           <h1>Barba.BaseView</h1>
           <p>BaseViewを拡張します。</p><br>
