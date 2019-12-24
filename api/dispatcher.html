@@ -1,8 +1,151 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>Barba.Dispacher | Barba - にほんご。</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="Barba.Dispacher | Barba - にほんご。"><meta property="og:url"><meta property="og:type" content="article"><link rel="icon" href="https://tr.you84815.space/barba/favicon.ico"><link rel="stylesheet" href="../css/main.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"><header><div class="icon"><a class="no-barba" href="https://tr.you84815.space/"><svg width="16" height="16"><rect width="16" height="16" fill="#e0e0e0"></rect></svg></a></div><div class="navi_toggle" onclick="toggleMenu()"><svg id="menu_close" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><svg id="menu_open" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="title">Barba - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div></header><div class="navi" id="navi"><ul class="menu"><li><a class="index" href="../index.html">Home</a></li><li><a href="../introduction.html">Introduction</a></li><li><a href="../how-it-works.html">How it works</a></li><li><a href="../installation.html">Installation</a></li><li><a href="../transition.html">Transition</a></li><li><a href="../events.html">Events</a></li><li><a href="../views.html">Views</a></li><li><a href="../cache.html">Cache</a></li><li><a href="../prefetch.html">Prefetch</a></li><li><a href="../partial-output.html">Partial Output</a></li><li><span onclick="toggleApi()">API</span><ul id="navi_api"><li><a href="../api/base-cache.html">BaseCache</a></li><li><a href="../api/base-transition.html">BaseTransition</a></li><li><a href="../api/base-view.html">BaseView</a></li><li><a class="active" href="../api/dispatcher.html">Dispatcher</a></li><li><a href="../api/history-manager.html">HistoryManager</a></li><li><a href="../api/pjax.html">Pjax</a></li><li><a href="../api/pjax-dom.html">Pjax.Dom</a></li><li><a href="../api/prefetch.html">Prefetch</a></li><li><a href="../api/utils.html">Utils</a></li></ul></li><li><span onclick="toggleDemos()">Demos</span><ul class="hidden" id="navi_demos"><li><a class="external-link" href="http://barbajs.org/demo/grid/index.html" target="_blank" rel="noopener noreferrer">official - Grid</a></li><li><a class="external-link" href="http://barbajs.org/demo/nextprev/index.html" target="_blank" rel="noopener noreferrer">official - Next/Prev</a></li><li><a class="external-link" href="http://barbajs.org/demo/nextprev-circle/index.html" target="_blank" rel="noopener noreferrer">official - Circles</a></li><li><a href="../demo/basic/1.html" target="_blank" rel="noopener noreferrer">Basic</a></li><li><a href="../demo/hide-show/1.html" target="_blank" rel="noopener noreferrer">HideShow</a></li><li><a href="../demo/fade/1.html" target="_blank" rel="noopener noreferrer">Fadein/out</a></li><li><a href="../demo/event/1.html" target="_blank" rel="noopener noreferrer">Event</a></li><li><a href="../demo/view/1.html" target="_blank" rel="noopener noreferrer">View</a></li><li><a href="../demo/cache/1.html" target="_blank" rel="noopener noreferrer">Cache</a></li><li><a href="../demo/prefetch/1.html" target="_blank" rel="noopener noreferrer">Prefetch</a></li><li><a href="../demo/partial-output/1.html" target="_blank" rel="noopener noreferrer">Partial Output</a></li><li><a href="../demo/no-barba/1.html" target="_blank" rel="noopener noreferrer">No Barba</a></li></ul></li><li><a href="../faq.html">FAQ</a></li><li><a href="../various.html">Various</a></li><li class="cls" style="font-size:.8em"><a class="external-link" href="https://github.com/luruke/barba.js" target="_blank" rel="noopener noreferrer">Github</a></li><li class="cls" style="font-size:.8em"><a class="external-link" href="https://twitter.com/luruke" target="_blank" rel="noopener noreferrer">@luruke</a></li></ul></div><div id="content"><div id="main"><div id="barba-wrapper"><div class="barba-container"><h1>Barba.Dispacher</h1><div id="update_date"><span>更新日: 2018.02.09
-</span></div><p>MicroEvent.jsを参考にした小さなディスパッチャです。</p><br><h2 id="member">メンバ変数</h2><h3 id="dispatcher-eventsobject">Barba.Dispatcher.eventsObject</h3><p>全てのイベントを保持するオブジェクトです。</p><dl><dt><b>type</b><span class="type"> : object</span></dt></dl><br><h2 id="method">関数</h2><h3 id="dispatcher-off">Barba.Dispatcher.off(eventName, function)</h3><p>イベントをUnbindします。</p><dl><dt><b>eventName</b><span class="args"> : string</span></dt><dd>-</dd><dt><b>function</b><span class="args"> : function</span></dt><dd>-</dd></dl><br><h3 id="dispatcher-on">Barba.Dispatcher.on(eventName, function)</h3><p>イベントにコールバックをbindします。</p><dl><dt><b>eventName</b><span class="args"> : string</span></dt><dd>-</dd><dt><b>function</b><span class="args"> : function</span></dt><dd>-</dd></dl><br><h3 id="dispatcher-trigger">Barba.Dispatcher.trigger(eventName, args)</h3><p>関連する全てのイベントを実行します。</p><dl><dt><b>eventName</b><span class="args"> : string</span></dt><dd>-</dd><dt><b>args</b><span class="args"> : *</span></dt><dd>繰り返し可能</dd></dl><br><br><div class="license"><p>&copy; 2016
- Luigi De Rosa Released under the <a href="https://github.com/luruke/barba.js/blob/master/LICENSE">MIT license</a></p><p>このコンテンツはLuigi De Rosa(luruke)による<a href="http://barbajs.org/">Barbaドキュメント</a>を翻訳/改変したものです。<br></p></div></div></div></div></div><footer><span> &copy; <span id="copy_year">2017</span> tobijibu</span></footer></div><noscript id="deferred-styles"><link href="../css/lazy.css" rel="stylesheet"></noscript><script src="../js/main.js" defer></script><div id="src" hidden></div></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Barba.Dispacher | Barba - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Barba.Dispacher | Barba - にほんご。">
+    <meta property="og:url">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="https://tr.you84815.space/barba/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link id="theme_style" rel="stylesheet" type="text/css" href="">
+    <script id="srcTheme" src="../js/toggleTheme.js" data-dir="barba"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-106478577-1', 'auto');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="icon"><a class="no-barba" href="https://tr.you84815.space/">
+            <svg width="16" height="16">
+              <rect width="16" height="16" fill="#e0e0e0"></rect>
+            </svg></a></div>
+        <div class="navi_toggle" onclick="toggleMenu()">
+          <svg id="menu_close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+          <svg id="menu_open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+        <div class="title">Barba - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div><span id="toggleTheme">
+          <svg role="img" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+          </svg></span>
+      </header>
+      <div class="navi" id="navi">
+        <ul class="menu">
+          <li><a class="index" href="../index.html">Home</a></li>
+          <li><a href="../introduction.html">Introduction</a></li>
+          <li><a href="../how-it-works.html">How it works</a></li>
+          <li><a href="../installation.html">Installation</a></li>
+          <li><a href="../transition.html">Transition</a></li>
+          <li><a href="../events.html">Events</a></li>
+          <li><a href="../views.html">Views</a></li>
+          <li><a href="../cache.html">Cache</a></li>
+          <li><a href="../prefetch.html">Prefetch</a></li>
+          <li><a href="../partial-output.html">Partial Output</a></li>
+          <li><span onclick="toggleApi()">API</span>
+            <ul id="navi_api">
+              <li><a href="../api/base-cache.html">BaseCache</a></li>
+              <li><a href="../api/base-transition.html">BaseTransition</a></li>
+              <li><a href="../api/base-view.html">BaseView</a></li>
+              <li><a class="active" href="../api/dispatcher.html">Dispatcher</a></li>
+              <li><a href="../api/history-manager.html">HistoryManager</a></li>
+              <li><a href="../api/pjax.html">Pjax</a></li>
+              <li><a href="../api/pjax-dom.html">Pjax.Dom</a></li>
+              <li><a href="../api/prefetch.html">Prefetch</a></li>
+              <li><a href="../api/utils.html">Utils</a></li>
+            </ul>
+          </li>
+          <li><span onclick="toggleDemos()">Demos</span>
+            <ul class="hidden" id="navi_demos">
+              <li><a class="external-link" href="http://barbajs.org/demo/grid/index.html" target="_blank" rel="noopener noreferrer">official - Grid</a></li>
+              <li><a class="external-link" href="http://barbajs.org/demo/nextprev/index.html" target="_blank" rel="noopener noreferrer">official - Next/Prev</a></li>
+              <li><a class="external-link" href="http://barbajs.org/demo/nextprev-circle/index.html" target="_blank" rel="noopener noreferrer">official - Circles</a></li>
+              <li><a href="../demo/basic/1.html" target="_blank" rel="noopener noreferrer">Basic</a></li>
+              <li><a href="../demo/hide-show/1.html" target="_blank" rel="noopener noreferrer">HideShow</a></li>
+              <li><a href="../demo/fade/1.html" target="_blank" rel="noopener noreferrer">Fadein/out</a></li>
+              <li><a href="../demo/event/1.html" target="_blank" rel="noopener noreferrer">Event</a></li>
+              <li><a href="../demo/view/1.html" target="_blank" rel="noopener noreferrer">View</a></li>
+              <li><a href="../demo/cache/1.html" target="_blank" rel="noopener noreferrer">Cache</a></li>
+              <li><a href="../demo/prefetch/1.html" target="_blank" rel="noopener noreferrer">Prefetch</a></li>
+              <li><a href="../demo/partial-output/1.html" target="_blank" rel="noopener noreferrer">Partial Output</a></li>
+              <li><a href="../demo/no-barba/1.html" target="_blank" rel="noopener noreferrer">No Barba</a></li>
+            </ul>
+          </li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../various.html">Various</a></li>
+          <li class="cls" style="font-size:.8em"><a class="external-link" href="https://github.com/luruke/barba.js" target="_blank" rel="noopener noreferrer">Github</a></li>
+          <li class="cls" style="font-size:.8em"><a class="external-link" href="https://twitter.com/luruke" target="_blank" rel="noopener noreferrer">@luruke</a></li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="main">
+          <div id="barba-wrapper">
+            <div class="barba-container">
+              <h1>Barba.Dispacher</h1>
+              <div id="update_date"><span>更新日: 2018.02.09
+</span>
+              </div>
+              <p>MicroEvent.jsを参考にした小さなディスパッチャです。</p><br>
+              <h2 id="member">メンバ変数</h2>
+              <h3 id="dispatcher-eventsobject">Barba.Dispatcher.eventsObject</h3>
+              <p>全てのイベントを保持するオブジェクトです。</p>
+              <dl>
+                <dt><b>type</b><span class="type"> : object</span></dt>
+              </dl><br>
+              <h2 id="method">関数</h2>
+              <h3 id="dispatcher-off">Barba.Dispatcher.off(eventName, function)</h3>
+              <p>イベントをUnbindします。</p>
+              <dl>
+                <dt><b>eventName</b><span class="args"> : string</span></dt>
+                <dd>-</dd>
+                <dt><b>function</b><span class="args"> : function</span></dt>
+                <dd>-</dd>
+              </dl><br>
+              <h3 id="dispatcher-on">Barba.Dispatcher.on(eventName, function)</h3>
+              <p>イベントにコールバックをbindします。</p>
+              <dl>
+                <dt><b>eventName</b><span class="args"> : string</span></dt>
+                <dd>-</dd>
+                <dt><b>function</b><span class="args"> : function</span></dt>
+                <dd>-</dd>
+              </dl><br>
+              <h3 id="dispatcher-trigger">Barba.Dispatcher.trigger(eventName, args)</h3>
+              <p>関連する全てのイベントを実行します。</p>
+              <dl>
+                <dt><b>eventName</b><span class="args"> : string</span></dt>
+                <dd>-</dd>
+                <dt><b>args</b><span class="args"> : *</span></dt>
+                <dd>繰り返し可能</dd>
+              </dl><br><br>
+              <div class="license">
+                <p>
+                  &copy; 2016
+                   Luigi De Rosa Released under the <a href="https://github.com/luruke/barba.js/blob/master/LICENSE">MIT license</a>
+                </p>
+                <p>このコンテンツはLuigi De Rosa(luruke)による<a href="http://barbajs.org/">Barbaドキュメント</a>を翻訳/改変したものです。<br></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer><span>&copy; <span id="copy_year">2017</span> tobijibu</span></footer>
+    </div>
+    <noscript id="deferred-styles">
+      <link href="../css/lazy.css" rel="stylesheet">
+    </noscript>
+    <script src="../js/main.js" defer></script>
+    <div id="src" hidden></div>
+  </body>
+</html>
